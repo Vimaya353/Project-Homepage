@@ -1,79 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>H.M Vimaya Pankagee Herath | Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+  <!-- ==================== HEADER ==================== -->
   <header class="hero">
+
     <div class="hero-photo">
-      <img src="images/portrait.jpg.jpeg" alt="Portrait of vimaya">
+      <img src="images/portrait.jpg.jpeg" alt="Portrait of Vimaya Herath">
       <h1>Vimaya Herath</h1>
     </div>
+
     <section class="about">
       <h2>About me</h2>
-      <p><section class="about">
-  <p>
-    Hi, I'm Vimaya, a third-year undergraduate studying Bsc hons in Information Technology
-     in Sri Lanka. I enjoy building clean, responsive
-    websites with HTML, CSS and JavaScript, and I'm learning more every week
-    through The Odin Project. I'm currently looking for an internship where I
-    can contribute to real projects, learn from experienced developers and
-    grow as a front-end engineer.
-  </p>
-  <ul class="social-links">
-    <li>
-      <a href="https://github.com/Vimaya353" aria-label="GitHub profile">
-        <img src="images/icons/github-original-wordmark.svg" alt="">
-      </a>
-    </li>
-    <li>
-      <a href="www.linkedin.com/in/vimaya353" aria-label="LinkedIn profile">
-        <img src="images/icons/linkedin-original.svg" alt="">
-      </a>
-    </li>
-  </ul>
-</section></p>
+
+      <p>
+        Hi, I'm Vimaya, a third-year undergraduate studying BSc (Hons) in
+        Information Technology in Sri Lanka. I enjoy building clean, responsive
+        websites with HTML, CSS and JavaScript, and I'm learning more every week
+        through The Odin Project. I'm currently looking for an internship where
+        I can contribute to real projects, learn from experienced developers
+        and grow as a front-end engineer.
+      </p>
+
       <ul class="social-links">
-        <li><a href="https://github.com/YOU" aria-label="GitHub"><img src="images/icons/github.svg" alt=""></a></li>
-        <!-- linkedin, twitter -->
+        <li>
+          <a href="https://github.com/Vimaya353" aria-label="GitHub profile">
+            <img src="images/icons/github-original-wordmark.svg" alt="">
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/vimaya353" aria-label="LinkedIn profile">
+            <img src="images/icons/linkedin-original.svg" alt="">
+          </a>
+        </li>
       </ul>
     </section>
+
   </header>
 
+
+  <!-- ==================== MY WORK ==================== -->
   <main>
     <section class="work">
       <h2>My work</h2>
+
       <ul class="projects">
-        <li class="project-card">
-          <div class="project-image">screenshot of project</div>
+
+        <!-- Project 1: RideLink -->
+        <li class="project-card" style="--card-color: #9b1c1c;">
+
+          <div class="project-image">
+            <span>RideLink</span>
+
+            <ul class="tags">
+              <li>Java 17</li>
+              <li>Spring Boot</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+
           <div class="project-info">
             <div class="project-title">
-              <h3>Project name</h3>
-              <a href="#" aria-label="View code on GitHub"><img src="images/icons/github.svg" alt=""></a>
-              <a href="#" aria-label="Live demo"><img src="images/icons/external-link.svg" alt=""></a>
+              <h3>RideLink</h3>
+
+              <a href="https://github.com/janith-kavinda/ridelink-backend" aria-label="RideLink code on GitHub">
+                <img src="images/icons/github-original-wordmark.svg" alt="">
+              </a>
             </div>
-            <p>Short description of the project.</p>
+
+            <p>
+              Ride-hailing backend built as four Spring Boot microservices.
+              I built the Account Service: JWT login, role-based access and
+              admin account management.
+            </p>
           </div>
+
         </li>
-        <!-- repeat x6 -->
+
+
+        <!-- Project 2: One Promise -->
+        <li class="project-card" style="--card-color: #7c6fc9;">
+
+          <div class="project-image">
+            <span>One Promise</span>
+
+            <ul class="tags">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <h3>One Promise</h3>
+
+              <a href="https://github.com/Vimaya353/REPO-NAME" aria-label="One Promise code on GitHub">
+                <img src= "images/icons/github-original-wordmark.svg" alt="">
+              </a>
+            </div>
+
+            <p>
+              Wedding photography booking system. I built the Booking &amp;
+              Pricing module with package selection, dynamic pricing and
+              discounts.
+            </p>
+          </div>
+
+        </li>
+
+
+        <!-- Project 3: Pretty Touch -->
+        <li class="project-card" style="--card-color: #5b8c4f;">
+
+          <div class="project-image">
+            <span>Pretty Touch</span>
+
+            <ul class="tags">
+              <li>Java</li>
+              <li>JSP</li>
+              <li>Servlets</li>
+              <li>MVC</li>
+            </ul>
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Pretty Touch</h3>
+
+              <a href="https://github.com/IT24100479/PrettyTouch" aria-label="Pretty Touch code on GitHub">
+                <img src="images/icons/github-original-wordmark.svg" alt="">
+              </a>
+            </div>
+
+            <p>
+              Salon appointment booking system. I built user management:
+              registration, authentication, sessions and admin accounts.
+            </p>
+          </div>
+
+        </li>
+
+
+        <!-- Project 4: Recipes -->
+        <li class="project-card" style="--card-color: #c0629f;">
+
+          <div class="project-image">
+            <span>Recipes</span>
+
+            <ul class="tags">
+              <li>HTML</li>
+              <li>Git</li>
+            </ul>
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Recipes</h3>
+
+              <a href="https://github.com/Vimaya353/odin-recipes" aria-label="Recipes code on GitHub">
+                <img src="images/icons/github-original-wordmark.svg" alt="">
+              </a>
+
+            </div>
+
+            <p>
+              My first Odin Project build: a multi-page recipe site using
+              semantic HTML and links.
+            </p>
+          </div>
+
+        </li>
+
+
+        <!-- Project 5: Landing Page -->
+        <li class="project-card" style="--card-color: #d58f3a;">
+
+          <div class="project-image">
+            <span>Landing Page</span>
+
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Flexbox</li>
+            </ul>
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Landing Page</h3>
+
+              <a href="https://github.com/Vimaya353/Landing-page" aria-label="Landing Page code on GitHub">
+                <img src="images/icons/github-original-wordmark.svg" alt="">
+              </a>
+            </div>
+
+            <p>
+              A responsive landing page built from a design brief using
+              Flexbox.
+            </p>
+          </div>
+
+        </li>
+
+
+        <!-- Project 6: Admin Dashboard -->
+        <li class="project-card" style="--card-color: #4a9fd4;">
+
+          <div class="project-image">
+            <span>Admin Dashboard</span>
+
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Grid</li>
+            </ul>
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Admin Dashboard</h3>
+
+              <a href="https://github.com/Vimaya353/Project-Admin-Dashboard" aria-label="Admin Dashboard code on GitHub">
+                <img src="images/icons/github-original-wordmark.svg" alt="">
+              </a>
+
+            </div>
+
+            <p>
+              A dashboard layout built with CSS Grid, featuring a sidebar,
+              header and card sections.
+            </p>
+          </div>
+
+        </li>
+
       </ul>
     </section>
   </main>
 
+
+  <!-- ==================== CONTACT ==================== -->
   <footer class="contact">
+
     <div class="contact-info">
       <h2>Contact me</h2>
-      <p>Please get in touch if you think our work could be mutually beneficial!</p>
-      <address>Your address or city</address>
-      <!-- phone + email with icons, then social links -->
+
+      <p>I'm open to internship opportunities. Feel free to reach out!</p>
+
+      <address>Malabe, Sri Lanka</address>
+
+      <ul class="contact-details">
+
+        <li>
+            <img src="images/icons/phone-dial.svg" alt="">
+            <a href="tel:+94713230530">+94 71 323 0530</a>
+        </li>
+        <li>
+          <img src="images/icons/email.svg" alt="">
+          <a href="mailto:arionlester88@gmail.com">arionlester88@gmail.com</a>
+        </li>
+      </ul>
+
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/Vimaya353" aria-label="GitHub profile">
+            <img src="images/icons/github-original-wordmark.svg" alt="">
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/vimaya353" aria-label="LinkedIn profile">
+            <img src="images/icons/linkedin-original.svg" alt="">
+          </a>
+        </li>
+      </ul>
     </div>
-    <img src="images/contact.jpg" alt="YOUR NAME working at a laptop">
+
+    <img src="images/woman-working-with-computer-vector.jpg" alt="Vimaya Herath working at a laptop">
+
   </footer>
+
 </body>
+
 </html>

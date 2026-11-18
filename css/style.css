@@ -1,0 +1,481 @@
+/* ==========================================================
+   Homepage – full stylesheet
+   Desktop: 1000px+   Tablet: 600–999px   Mobile: under 600px
+   ========================================================== */
+
+/* ---------- 1. Reset & variables ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --teal: #0891b2;
+  --text: #1a1a1a;
+  --muted: #444;
+  --white: #fff;
+  --shadow: 0 2px 6px rgb(0 0 0 / 0.25);
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Roboto", sans-serif;
+
+  /* Side padding that keeps content in a 1000px column on wide screens */
+  --gutter: max(20px, calc((100% - 1000px) / 2));
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.5;
+}
+
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+a { color: inherit; }
+
+a:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+/* ---------- 2. Hero (desktop) ---------- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(200px, 30%) 1fr;
+  align-items: start;
+  background: var(--teal);
+  padding: 24px var(--gutter) 24px;
+  isolation: isolate;
+}
+
+/* White diagonal shape at the bottom of the hero */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  background: var(--white);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  z-index: -1;
+}
+
+.hero-photo {
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(transparent, rgb(0 0 0 / 0.65));
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 185 / 200;
+  object-fit: cover;
+}
+
+.hero-photo h1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 8px 4px;
+  color: var(--white);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  line-height: 1.1;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 0.5);
+}
+
+/* ---------- 3. About card ---------- */
+.about {
+  margin-top: 20px;
+  padding: 24px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.about p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ---------- 4. Social links (shared by about + contact) ---------- */
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.about .social-links {
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-links a {
+  display: block;
+  transition: transform 0.15s ease;
+}
+
+.social-links a:hover { transform: translateY(-2px); }
+
+/* ---------- 5. My work ---------- */
+.work {
+  padding: 40px var(--gutter) 70px;
+}
+
+.work > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 24px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgb(0 0 0 / 0.3);
+}
+
+/* Colored placeholder panel (swap for a real <img> later) */
+.project-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  aspect-ratio: 4 / 3;
+  padding: 16px;
+  background: var(--card-color, #888);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Real screenshots, if you add them */
+.project-card > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+}
+
+.tags li {
+  padding: 2px 10px;
+  border: 1px solid rgb(255 255 255 / 0.7);
+  border-radius: 999px;
+}
+
+.project-info {
+  flex: 1;
+  padding: 12px;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-title h3 {
+  margin-right: auto;
+  font-size: 0.875rem;
+}
+
+.project-title img {
+  width: 16px;
+  height: 16px;
+}
+
+.project-info p {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ---------- 6. Contact ---------- */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  align-items: center;
+  gap: 30px;
+  padding: 24px var(--gutter);
+  background: var(--teal);
+  color: var(--white);
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.contact-info > p {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.contact address {
+  font-style: normal;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 0.75rem;
+}
+
+.contact-details li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Turns black SVG icons white on the teal background */
+.contact-details img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+.contact-details a {
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-details a:hover { text-decoration: underline; }
+
+.contact .social-links img {
+  width: 28px;
+  height: 28px;
+}
+
+.contact a:focus-visible {
+  outline-color: var(--white);
+}
+
+.contact > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ---------- 7. Tablet: 600px – 999px ---------- */
+@media (min-width: 600px) and (max-width: 999px) {
+  .hero {
+    display: block;
+    padding-bottom: 40px;
+  }
+
+  /* Let the img float and the name position against the hero */
+  .hero-photo {
+    display: contents;
+  }
+
+  .hero-photo img {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 200px;
+    margin: 0 20px 10px 0;
+    box-shadow: var(--shadow);
+  }
+
+  /* Name moves to the top right, over the teal */
+  .hero-photo h1 {
+    position: absolute;
+    top: 24px;
+    right: var(--gutter);
+    left: auto;
+    bottom: auto;
+    padding: 0;
+    font-size: 2rem;
+    text-shadow: none;
+  }
+
+  /* Card sits below the name; text wraps around the floated photo */
+  .about {
+    position: relative;
+    margin-top: 60px;
+  }
+
+  .about h2 {
+    text-align: right;
+  }
+
+  .about::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- 8. Mobile: under 600px ---------- */
+@media (max-width: 599px) {
+  .hero {
+    display: block;
+    padding: 20px 20px 50px;
+  }
+
+  .hero::after {
+    height: 30%;
+  }
+
+  .hero-photo {
+    max-width: 260px;
+    margin-inline: auto;
+  }
+
+  .hero-photo img {
+    aspect-ratio: 1 / 1.1;
+  }
+
+  .hero-photo h1 {
+    font-size: 1.75rem;
+  }
+
+  .about {
+    margin-top: 16px;
+    padding: 20px;
+  }
+
+  .about h2 {
+    text-align: center;
+  }
+
+  .about .social-links {
+    justify-content: center;
+  }
+
+  .work {
+    padding: 30px 20px 50px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .contact-details li,
+  .contact .social-links {
+    justify-content: center;
+  }
+
+  .contact > img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* ---------- 9. Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .project-card,
+  .social-links a {
+    transition: none;
+  }
+  .project-card:hover,
+  .project-card:focus-within,
+  .social-links a:hover {
+    transform: none;
+  }
+}
+
+.hero-photo::before { display: none; }
+
+.hero-photo img { transform: scaleX(-1); }
+
+--gutter: max(20px, calc((100% - 900px) / 2));
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.contact-info > p {
+  font-size: 1rem;
+  margin-bottom: 22px;
+}
+
+.contact address {
+  font-size: 1rem;
+  margin-bottom: 22px;
+}
+
+.contact-details {
+  gap: 12px;
+  font-size: 1rem;
+}
+
+.contact-details img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.contact .social-links img {
+  width: 32px;
+  height: 32px;
+}
